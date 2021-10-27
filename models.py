@@ -40,6 +40,14 @@ class Tarefas(Base):
     def __repr__(self):
         return '<tarefa => {}'.format(self.titulo)
 
+    def save(self):
+        db_session.add(self)
+        db_session.commit()
+
+    def delete(self):
+        db_session.delete(self)
+        db_session.commit()
+
 def init_db():
     Base.metadata.create_all(bind=engine)
 
