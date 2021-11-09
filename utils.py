@@ -24,7 +24,7 @@ def remove_pessoa():
 
 # função para inserir uma pessoa
 def insere_tarefa():
-    tarefa = Tarefas(titulo='Comprar pão', fk_pessoa_id=1)
+    tarefa = Tarefas(titulo='Comprar fraldas', fk_pessoa_id=1)
     tarefa.save()
 
 def lista_tarefas():
