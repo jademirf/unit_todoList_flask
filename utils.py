@@ -53,5 +53,5 @@ if __name__ == '__main__':
     # insere_tarefa()
     # atualiza_tarefa()
     # consulta_tarefa()
-    remove_tarefa()
+    # remove_tarefa()
     lista_tarefas()
