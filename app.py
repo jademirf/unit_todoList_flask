@@ -19,13 +19,16 @@ class Pessoa(Resource):
             return { 'erro': 'Nenhum usuario identificado com o id informado.'}
 
 class Usuarios(Resource):
-    def get(self):
-        pessoas = Pessoas.query.all()
-        return pessoas
+    # def get(self):
+    #     pessoas = Pessoas.query.all()
+    #     return pessoas
+    def post(self):
+        pessoa = Pessoas(nome='Desmennyellysson', idade=30)
+        pessoa.save()
 
 
 api.add_resource(Pessoa, '/pessoas/<int:id>')
-# api.add_resource(Usuarios, '/pessoas')
+api.add_resource(Usuarios, '/pessoas')
 
 if __name__ == '__main__':
     app.run(debug=True)
